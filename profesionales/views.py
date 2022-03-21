@@ -1,7 +1,7 @@
 from django.shortcuts import redirect, render
 
 
-from .forms import CerrajeroBusqueda, CerrajeroFormulario,FutbolistaFormulario,ProfesorFormulario
+from .forms import CerrajeroBusqueda , CerrajeroFormulario,FutbolistaFormulario,ProfesorFormulario, FutbolistaBusqueda , ProfesorBusqueda
 from .models import Cerrajero,Futbolista,Profesor
 
 def crear_cerrajero(request):
@@ -62,3 +62,30 @@ def lista_cerrajeros(request):
     form = CerrajeroBusqueda()
     return render(request,"profesionales/lista_cerrajeros.html",{"form":form,"cerrajeros":cerrajeros})
 
+
+def lista_futbolistas(request):
+   
+    nombre_a_buscar = request.GET.get("nombre",None)
+    
+    if nombre_a_buscar is not None:
+        futbolistas = Futbolista.objects.filter(nombre__icontains=nombre_a_buscar)
+    else:
+        futbolistas = Futbolista.objects.all() 
+   #
+  
+    form = FutbolistaBusqueda()
+    return render(request,"profesionales/lista_futbolistas.html",{"form":form,"futbolistas":futbolistas})
+
+
+def lista_profesores(request):
+   
+    nombre_a_buscar = request.GET.get("nombre",None)
+    
+    if nombre_a_buscar is not None:
+        profesores = Profesor.objects.filter(nombre__icontains=nombre_a_buscar)
+    else:
+        profesores = Profesor.objects.all() 
+   #
+  
+    form = ProfesorBusqueda()
+    return render(request,"profesionales/lista_profesores.html",{"form":form,"profesores":profesores})

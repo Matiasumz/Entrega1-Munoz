@@ -16,7 +16,7 @@ class Futbolista(models.Model):
     club = models.CharField(max_length=30)
     
     def __str__(self):
-        return f"{self.nombre} {self.apellido}"
+        return f"{self.nombre} {self.apellido}-{self.club}"
 
 
 class Profesor(models.Model):
@@ -25,4 +25,4 @@ class Profesor(models.Model):
     curso = models.CharField(max_length=20)
     
     def __str__(self):
-        return f"{self.nombre} {self.apellido}"
+        return f"{self.nombre} {self.apellido}-{self.curso}"
