@@ -1,8 +1,8 @@
 from django.shortcuts import redirect, render
 
 
-from .forms import CerrajeroBusqueda, CerrajeroFormulario
-from .models import Cerrajero
+from .forms import CerrajeroBusqueda, CerrajeroFormulario,FutbolistaFormulario,ProfesorFormulario
+from .models import Cerrajero,Futbolista,Profesor
 
 def crear_cerrajero(request):
     
@@ -17,6 +17,37 @@ def crear_cerrajero(request):
             
     form = CerrajeroFormulario()
     return render (request,"profesionales/crear_cerrajero.html ", {'form': form})
+
+
+def crear_futbolista(request):
+    
+    if request.method == "POST":
+        form = FutbolistaFormulario(request.POST)
+        
+        if form.is_valid():
+            data = form.cleaned_data
+            futbolista = Futbolista(nombre=data["nombre"],apellido=data["apellido"],club=data["club"])
+            futbolista.save()
+            return redirect("index")
+            
+    form = FutbolistaFormulario()
+    return render (request,"profesionales/crear_futbolista.html ", {'form': form})
+
+
+def crear_profesor(request):
+    
+    if request.method == "POST":
+        form = ProfesorFormulario(request.POST)
+        
+        if form.is_valid():
+            data = form.cleaned_data
+            profesor = Profesor(nombre=data["nombre"],apellido=data["apellido"],curso=data["curso"])
+            profesor.save()
+            return redirect("index")
+            
+    form = ProfesorFormulario()
+    return render (request,"profesionales/crear_profesor.html ", {'form': form})
+
 
 def lista_cerrajeros(request):
    
