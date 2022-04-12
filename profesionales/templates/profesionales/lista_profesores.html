@@ -4,7 +4,9 @@
 {% endblock "header_block" %}
 
 {% block "body_block" %}
-
+    <p>
+        <a href={% url 'crear_profesor' %}>Crear profesor</a>
+    </p>
     <form action = "" method = "get">
         {% csrf_token %}
         <table>
