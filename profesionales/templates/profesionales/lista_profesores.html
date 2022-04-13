@@ -18,7 +18,13 @@
     </form>
     
     {% for profesor in profesores  %}
-        <li>{{profesor}}</li>
+        <li>
+
+            <a href={% url 'detalle_profesor' profesor.id %}>{{profesor}}</a>|
+            <a href={% url 'editar_profesor' profesor.id %}>Editar</a>|
+            <a href={% url 'borrar_profesor' profesor.id %}>Borrar</a>|
+        
+        </li>
     {% endfor %}
 
 {% endblock "body_block"  %}

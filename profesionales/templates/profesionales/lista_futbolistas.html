@@ -18,7 +18,13 @@
     </form>
     
     {% for futbolista in futbolistas  %}
-        <li>{{futbolista}}</li>
+        <li>
+
+            <a href={% url 'detalle_futbolista' futbolista.id %}>{{futbolista}}</a>|
+            <a href={% url 'editar_futbolista' futbolista.id %}>Editar</a>|
+            <a href={% url 'borrar_futbolista' futbolista.id %}>Borrar</a>|
+        
+        </li>
     {% endfor %}
 
 {% endblock "body_block"  %}

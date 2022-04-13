@@ -19,7 +19,13 @@
     </form>
     
     {% for cerrajero in cerrajeros  %}
-        <li>{{cerrajero}}</li>
+        <li>
+            <a href={% url 'detalle_cerrajero' cerrajero.id %}>{{cerrajero}}</a>|
+            <a href={% url 'editar_cerrajero' cerrajero.id %}>Editar</a>|
+            <a href={% url 'borrar_cerrajero' cerrajero.id %}>Borrar</a>|
+            
+            
+        </li>
     {% endfor %}
 
 {% endblock "body_block"  %}
