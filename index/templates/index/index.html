@@ -29,6 +29,7 @@
                 
                 {% else %}
                     <a class="navbar-brand" href= {% url 'login' %}>Login</a>
+                    <a class="navbar-brand" href= {% url 'registrarse' %}>Registrarse</a>
                 
                 {% endif %}
 
@@ -42,7 +43,13 @@
                     <div class="col-xl-6">
                         <div class="text-center text-white">
                             <!-- Page heading-->
-                            <h1 class="mb-5">Bienvenidos a la pre entrega!</h1>
+                            {% block header_text_block %}
+                            {% if Alerta %}
+                                {{Alerta}}
+                            {% else %}
+                                <h1 class="mb-5">Bienvenidos a la pre entrega!</h1>
+                            {% endif %}
+                            {% endblock header_text_block %}
                         </div>
                     </div>
                 </div>
