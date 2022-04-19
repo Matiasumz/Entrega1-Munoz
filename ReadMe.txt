@@ -7,17 +7,29 @@ Profesor == Cristian D.Biancotti
 Curso == Python
 Comision == 27605
 
--Activar el entorno virtual e instalar los elementos del requirements.txt
--Con el comando " manage.py runserver " se pone en marcha el servidor. Entrar en la direccion que genere.
--el programa tiene 7 vistas :
-    -1 pagina principal
-    -3 paginas para crear un profesional (Crear futbolista,Crear Profesor,Crear Cerrajeros)
-    -3 paginas para buscar profesionales (Buscar Cerrajeros,Buscar Futbolistas,Buscar Profesores)
+- Secretkey comentada en settings ! :D
+- Activar el entorno virtual e instalar los elementos del requirements.txt
+- Con el comando " manage.py runserver " se pone en marcha el servidor. Entrar en la direccion que genere.
 
--Cada una de estas vistas,tiene un formulario.En ellos se puede ingresar los datos para cargar un nuevo Profesional, y en caso de querer buscar uno existente, 
- -> se puede acceder a cada profesional (Cerrajeros,Profeso,Futbolistas).
+
+- El programa tiene 7 vistas :
+    
+    -1 "Inicio" - Pagina principal
+    
+    -3 Paginas para crear,buscar o editar un profesional (Cerrajeros,Futbolistas,Profesores)
+        - -Cada una de estas vistas,tiene un formulario.En ellos se puede ingresar los datos para cargar un nuevo Profesional, y en caso de querer buscar uno existente, 
+            -> se puede acceder a cada profesional.
+        -Tambien,tenemos la opcion de visualizar dicha lista de os profesionales existentes,debajo de cada formulario en las opciones de "Buscar".
+    
+    -1 "Acerca de mi" 
+    
+    -1 LogIn - Para logearte y poder crear,o editar profesionales.
+                -Tambien una vez logeado ,podremos adjuntar al perfil un Avatar,una url,y descripcion breve.
+
+    -1 SignUp! - Registrarse para asi poder logearte.
+
  
--Tambien,tenemos la opcion de visualizar dicha lista de os profesionales existentes,debajo de cada formulario en las opciones de "Buscar".
+- Tambien,tenemos la opcion de visualizar dicha lista de os profesionales existentes,debajo de cada formulario en las opciones de "Buscar".
 
 - Secretkey comentada en settings ! :D
 
