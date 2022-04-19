@@ -1,4 +1,4 @@
-extends 'index/index.html' %}
+{% extends 'index/index.html' %}
 
 {% block "header_block" %}
 {% endblock "header_block" %}
@@ -13,7 +13,7 @@ extends 'index/index.html' %}
     <p>
         <li>Nombre: {{profesor.nombre}}</li>
         <li>Apellido: {{profesor.apellido}}</li>
-        <li>Está desempleado: {{profesor.curso}}</li>
+        <li>Curso: {{profesor.curso}}</li>
         <li>Tarjeta de presentacion : {{object.tarjeta_presentacion | safe }}</li>
         <li>Fecha de creacion : {{object.fecha_creacion}}</li>
     

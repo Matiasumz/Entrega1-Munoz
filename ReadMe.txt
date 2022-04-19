@@ -1,4 +1,11 @@
---Bienvenidos a la pre entrega--
+ 
+                                 -- Bienvenidos a la entrega final ! --
+
+
+Alumno == Matias Muñoz
+Profesor == Cristian D.Biancotti
+Curso == Python
+Comision == 27605
 
 -Activar el entorno virtual e instalar los elementos del requirements.txt
 -Con el comando " manage.py runserver " se pone en marcha el servidor. Entrar en la direccion que genere.
