@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     "index",
     "profesionales",
     "accounts",
+    "ckeditor",
 ]
 
 MIDDLEWARE = [

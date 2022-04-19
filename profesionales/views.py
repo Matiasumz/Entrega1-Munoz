@@ -17,7 +17,7 @@ def crear_cerrajero(request):
         
         if form.is_valid():
             data = form.cleaned_data
-            cerrajero = Cerrajero(nombre=data["nombre"],apellido=data["apellido"],desempleado=data["desempleado"])
+            cerrajero = Cerrajero(nombre=data["nombre"],apellido=data["apellido"],desempleado=data["desempleado"],tarjeta_presentacion=data["tarjeta_presentacion"])
             cerrajero.save()
             return redirect("index")
             
@@ -32,7 +32,7 @@ def crear_futbolista(request):
         
         if form.is_valid():
             data = form.cleaned_data
-            futbolista = Futbolista(nombre=data["nombre"],apellido=data["apellido"],club=data["club"])
+            futbolista = Futbolista(nombre=data["nombre"],apellido=data["apellido"],club=data["club"],tarjeta_presentacion=data["tarjeta_presentacion"])
             futbolista.save()
             return redirect("index")
             
@@ -47,7 +47,7 @@ def crear_profesor(request):
         
         if form.is_valid():
             data = form.cleaned_data
-            profesor = Profesor(nombre=data["nombre"],apellido=data["apellido"],curso=data["curso"])
+            profesor = Profesor(nombre=data["nombre"],apellido=data["apellido"],curso=data["curso"],tarjeta_presentacion=data["tarjeta_presentacion"])
             profesor.save()
             return redirect("index")
             
