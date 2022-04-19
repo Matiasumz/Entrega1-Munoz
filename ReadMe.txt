@@ -12,3 +12,5 @@
  
 -Tambien,tenemos la opcion de visualizar dicha lista de os profesionales existentes,debajo de cada formulario en las opciones de "Buscar".
 
+- Secretkey comentada en settings ! :D
+
