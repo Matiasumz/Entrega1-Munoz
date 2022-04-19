@@ -7,6 +7,8 @@ Profesor == Cristian D.Biancotti
 Curso == Python
 Comision == 27605
 
+
+- Link del video : https://drive.google.com/file/d/1mKpzj1x8PuIaVUmNjaGw305lak9zH2s4/view?usp=sharing
 - Secretkey comentada en settings ! :D
 - Activar el entorno virtual e instalar los elementos del requirements.txt
 - Con el comando " manage.py runserver " se pone en marcha el servidor. Entrar en la direccion que genere.
@@ -32,4 +34,5 @@ Comision == 27605
 - Tambien,tenemos la opcion de visualizar dicha lista de os profesionales existentes,debajo de cada formulario en las opciones de "Buscar".
 
 - Secretkey comentada en settings ! :D
+
 
