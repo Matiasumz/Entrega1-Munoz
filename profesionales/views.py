@@ -28,11 +28,11 @@ def crear_cerrajero(request):
 def crear_futbolista(request):
     
     if request.method == "POST":
-        form = FutbolistaFormulario(request.POST)
+        form = FutbolistaFormulario(request.POST,request.FILES)
         
         if form.is_valid():
             data = form.cleaned_data
-            futbolista = Futbolista(nombre=data["nombre"],apellido=data["apellido"],club=data["club"],tarjeta_presentacion=data["tarjeta_presentacion"])
+            futbolista = Futbolista(nombre=data["nombre"],apellido=data["apellido"],club=data["club"],tarjeta_presentacion=data["tarjeta_presentacion"],ficha_club=data["ficha_club"])
             futbolista.save()
             return redirect("index")
             

@@ -22,6 +22,7 @@ class FutbolistaFormulario(forms.Form):
     apellido = forms.CharField(max_length=20)
     club = forms.CharField(max_length=30)
     tarjeta_presentacion = RichTextFormField(required=False)
+    ficha_club = forms.ImageField(required=False)
     
 class ProfesorFormulario(forms.Form):
     nombre = forms.CharField(max_length=20)
