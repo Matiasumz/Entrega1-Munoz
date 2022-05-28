@@ -19,5 +19,5 @@ urlpatterns = [
     path("profesor/<int:pk>/editar/",views.EditarProfesor.as_view(), name= "editar_profesor"),
     path("profesor/<int:pk>/borrar/",views.BorrarProfesor.as_view(), name= "borrar_profesor"),
     
-    #path("",name= "crear_profesor")
+   
 ]
