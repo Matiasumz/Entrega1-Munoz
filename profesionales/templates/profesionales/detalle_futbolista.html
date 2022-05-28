@@ -16,7 +16,7 @@
         <li>Club: {{object.club}}</li>
         <li>Tarjeta de presentacion : {{object.tarjeta_presentacion | safe }}</li>
         <li>Fecha de creacion : {{object.fecha_creacion}}</li>
-        {% if object.ficha_club.url != Null %}  # Se agrega condicion para el caso de que no se haya subido ninguna imagen.
+        {% if object.ficha_club.url != Null %} 
                 <li>Ficha Club : <img src="{{object.ficha_club.url}}" width="230" height="90"  alt="ficha" </li>
         {% else %} 
                 <li>Ficha club : No disponible</li>
