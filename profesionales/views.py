@@ -107,7 +107,7 @@ class DetalleCerrajero(DetailView):
 class EditarCerrajero(LoginRequiredMixin,UpdateView):
     model = Cerrajero
     success_url ="/profesionales/cerrajeros"
-    fields =["nombre","apellido","desempleado"]
+    fields =["nombre","apellido","desempleado","tarjeta_presentacion"]#se agrega para editar la tarjeta de presentacion.
     
 
 class BorrarCerrajero(LoginRequiredMixin,DeleteView):
@@ -122,7 +122,7 @@ class DetalleFutbolista(DetailView):
 class EditarFutbolista(LoginRequiredMixin,UpdateView):
     model = Futbolista
     success_url = "/profesionales/futbolistas/"
-    fields=["nombre","apellido","club"]
+    fields=["nombre","apellido","club","tarjeta_presentacion","ficha_club"] #se agrega para editar la tarjeta de presentacion.
 
 class BorrarFutbolista(LoginRequiredMixin,DeleteView):
     model = Futbolista
@@ -136,7 +136,7 @@ class DetalleProfesor(DetailView):
 class EditarProfesor(LoginRequiredMixin,UpdateView):
     model = Profesor
     success_url = "/profesionales/profesores/"
-    fields=["nombre","apellido","curso"]
+    fields=["nombre","apellido","curso","tarjeta_presentacion"] #se agrega para editar la tarjeta de presentacion.
 
 class BorrarProfesor(LoginRequiredMixin,DeleteView):
     model = Profesor
